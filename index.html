@@ -1,0 +1,153 @@
+<html class="thanks_for_purchasing_ohboard">
+	<head>
+		<meta charset="utf-8" /> 
+		<meta name="author" content="Stephen Ou" />
+		<title>OhBoard</title>  
+		<link rel="stylesheet" type="text/css" href="pretty_cute.css">
+		<link rel="icon" type="image/png" href="images/logo.png">
+		<script type="application/javascript" src="jquery.js"></script>
+		<script type="application/javascript" src="hotkeys.js"></script>
+		<script type="application/javascript" src="magic_making.js"></script>
+	</head>
+	<body class="i_think_you_probably_should_not_be_looking_at_this_but_if_you_do_thats_fine">
+		<div class="hidden">
+			<img src="images/pencil-white.png" />
+			<img src="images/pencil-black.png" />
+			<img src="images/eraser-white.png" />
+			<img src="images/eraser-black.png" />
+		</div>
+		<div class="pane">
+			<div class="inner">
+				<div class="buttons">
+					<button id="new">New</button>
+					<button id="undo">Undo</button>
+					<button id="redo">Redo</button>
+					<button id="delete">Delete</button>
+					<button id="export" rel=".overlay">Export</button>
+				</div>
+				<div class="tools">
+					<input type="radio" name="color" value="000000" id="pencil" /><label class="left selected" for="pencil" title="Pencil"><img src="images/pencil-white.png" /></label>
+					<input type="radio" name="color" value="FFFFFF" id="eraser" /><label class="right" for="eraser" title="Eraser"><img src="images/eraser-black.png" /></label>
+					<div class="clear"></div>
+				</div>
+				<ul>
+					<li id="0_li"><a href="#" title="Double-click to edit title" class="hidden link" id="0_link">Untitled</a><input type="text" class="edit" id="0_edit" title="Press enter to save" value="Untitled" /></li>
+				</ul>
+				<div class="links">
+					<a class="left" href="#" id="settings" rel=".overlay">Settings</a>
+					<a class="right" href="#" id="help" rel=".overlay">Help</a>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="overlay">
+			<div class="export">
+				<img id="preview" src="" width="500" height="250" />
+				<p>
+					<div class="center">
+						<b>The image is currently in: </b>
+						<input type="radio" name="export" value="png" id="export_png" />
+						<label for="export_png">PNG</label>
+						<input type="radio" name="export" value="gif" id="export_gif" />
+						<label for="export_gif">GIF</label>
+						<input type="radio" name="export" value="jpeg" id="export_jpeg" />
+						<label for="export_jpeg">JPEG</label>
+					</div>
+					<div class="clear"></div>
+				</p>
+				<div class="direction">
+					<span>Right-click image above & select <b>Save Image As</b>, or <b>drag it</b> into a folder/application.</span><a title="or hit ESC, or click on the mask" href="#" class="close">Close</a>
+				</div>
+			</div>
+			<div class="settings hidden">
+				<div class="title">Settings</div>
+				<p>
+					<div class="left">Enable <a href="#" onclick="$('.settings ul').toggle()">Shortcut</a></div>
+					<div class="right">
+						<input type="radio" name="shortcut" value="1" id="shortcut_1" />
+						<label for="shortcut_1">On</label>
+						<input type="radio" name="shortcut" value="0" id="shortcut_0" />
+						<label for="shortcut_0">Off</label>
+					</div>
+					<div class="clear"></div>
+				</p>
+				<ul class="hidden">
+					<li>N: New document</li>
+					<li>W: Delete document</li>
+					<li>S: Export document</li>
+					<li>Z: Undo</li>
+					<li>R: Redo</li>
+					<li>E: Edit title</li>
+					<li>Up Arrow: Previous document</li>
+					<li>Down Arrow: Next document</li>
+					<li>Left/Right Arrow: change between pencil/eraser</li>
+					<li>Shift + Drag: make straight line</li>
+				</ul>
+				<p class="center">More options coming soon. :)</p>
+				<div class="direction">
+					<a title="or hit ESC, or click on the mask" href="#" class="close">Close</a>
+				</div>
+			</div>
+			<div class="help hidden">
+				<div class="title">Help</div>
+				<p>
+					<b>How do I make a new document?</b> => Click the New button or press N.
+				</p>
+				<p>
+					<b>How do I undo a step?</b> => Click the Undo button or press Z.
+				</p>
+				<p>
+					<b>How do I redo a step?</b> => Click the Redo button or press R.
+				</p>
+				<p>
+					<b>How do I delete a document?</b> => Click the Delete button or press W.
+				</p>
+				<p>
+					<b>How do I export into image?</b> => Click the Export button or press S. Then right-click the image and select Save Image As.
+				</p>
+				<p>
+					<b>How do I edit the title of a document?</b> => Double-click the title or press E.
+				</p>
+				<p>
+					<b>How do I save a document?</b> => OhBoard saves everything automatically for you!
+				</p>
+				<p>
+					<b>How do I switch between documents?</b> => Click the title of the document or press Up/Down arrow.
+				</p>
+				<p>
+					<b>How do I switch between pencil & eraser?</b> => Click the icons or press Left/Right arrow.
+				</p>
+				<p>
+					<b>How do I update OhBoard?</b> => Chrome > Window > Extensions > Developer mode > Update extensions now. <a href="http://ohboard.com/blog/how-to-update-chrome-web-apps/">Details</a>.
+				</p>
+				<p>
+					<b>Where should I contact for bug report/feedback?</b>  => Email to <a href="mailto:stephen@ohboard.com">stephen@ohboard.com</a>, or use this <a href="http://ohboard.com/contact">contact form</a>.
+				</p>
+				<p>
+					<b>A list of shortcuts:</b>
+				</p>
+				<ul>
+					<li>N: New document</li>
+					<li>W: Delete document</li>
+					<li>S: Export document</li>
+					<li>Z: Undo</li>
+					<li>R: Redo</li>
+					<li>E: Edit title</li>
+					<li>Up Arrow: Previous document</li>
+					<li>Down Arrow: Next document</li>
+					<li>Left/Right Arrow: change between pencil/eraser</li>
+					<li>Shift + Drag: make straight line</li>
+				</ul>
+				<p>
+					<b>Thanks for purchasing OhBoard! :)</b>
+				</p>
+				<div class="direction">
+					<a title="or hit ESC, or click on the mask" href="#" class="close">Close</a>
+				</div>
+			</div>
+		</div>
+		<canvas id="canvas">
+			<p>This example requires a browser that supports the HTML5 &lt;canvas&gt; feature.</p>
+		</canvas>
+	</body>
+</html>
